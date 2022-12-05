@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&family=Zen+Dots&display=swap');
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Pompiere', cursive;
+font-family: 'Zen Dots', cursive;
+background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#phone {
+    
+}
+#laptop {
+   
+}
+#watch {
+   
+}
+#airpod {
+    
+}
