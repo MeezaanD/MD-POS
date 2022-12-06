@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+h2 {
+    text-align: center;
+    color: beige;
+}
+
 h3 {
     text-align: center;
     font-family: 'Pompiere', cursive;
@@ -16,6 +21,13 @@ h3 {
     background: -webkit-linear-gradient(#eee, #333);
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+}
+
+.product-text{
+    font-size: large;
+    text-align: center;
+    color: beige;
+    font-weight: 500;
 }
 
 .text {
@@ -48,6 +60,8 @@ h3 {
     font-size: small;
     font-weight: bold;
     color: black;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .container-home {
@@ -62,8 +76,13 @@ h3 {
 }
 
 .bindex {
-    background-color:rgb(0, 0, 0);
+    background-color: black;
+} 
+.bindex3 {
+    background-color:grey;
 }
+
+
 
 .container1 {
     position: relative;
@@ -112,7 +131,7 @@ h3 {
   }
   .centered4 {
     position: absolute;
-    top: 90%;
+    top: 88%;
     margin: auto;
     width: 100%;
     color: black;
@@ -153,9 +172,9 @@ h3 {
     grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
     grid-template-areas:
       "nav nav nav nav"
-      "main main main sidebar "
-      "main main main sidebar"
-      "main main main sidebar ";
+      "main main main main"
+      "main main main main"
+      "main main main main";
     grid-gap: 0.2rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -164,20 +183,16 @@ h3 {
     text-align: center;
   }
   header {
-    background:beige;
+    background:grey;
     grid-area: nav;
     padding-top: var(--main-padding);
   }
   main {
-    background:beige;
+    background:grey;
     grid-area: main;
     padding-top: var(--main-padding);
   }
-  #aside {
-    background:beige;
-    grid-area: sidebar;
-    padding-top: var(--main-padding);
-  }
+  
   @media (max-width: 550px) {
     .centered1, .centered2, .centered3, .centered4 {
         scale:0.4;
