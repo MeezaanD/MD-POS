@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pompiere&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 *,
 *::after,
 *::before{
@@ -10,21 +12,194 @@
 h3 {
     text-align: center;
     font-family: 'Pompiere', cursive;
-font-family: 'Zen Dots', cursive;
-background: -webkit-linear-gradient(#eee, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    font-family: 'Zen Dots', cursive;
+    background: -webkit-linear-gradient(#eee, #333);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
 
-#phone {
-    
+.text {
+    padding: 20px;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: beige;
 }
-#laptop {
-   
+
+.sub1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color:black;
 }
-#watch {
-   
+.sub2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color:beige;
 }
-#airpod {
-    
+.sub3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color:beige;
+}
+.sub4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: small;
+    font-weight: bold;
+    color: black;
+}
+
+.container-home {
+    text-align: center;
+    height: 750px;
+}
+
+.steve {
+    padding-bottom: 100px;
+    width: 500px;
+    height: 500px;
+}
+
+.bindex {
+    background-color:rgb(0, 0, 0);
+}
+
+.container1 {
+    position: relative;
+    text-align: center;
+    color: black;
+  }
+.container2 {
+    position: relative;
+    text-align: center;
+    color: black;
+  }
+.container3 {
+    position: relative;
+    text-align: center;
+    color: black;
+  }
+.container4 {
+    position: relative;
+    text-align: center;
+    color: black;
+  }
+  .more {
+    text-decoration: none;
+    color: beige;
+  }
+  .centered1 {
+    position: absolute;
+    top: 85%;
+    margin: auto;
+    width: 100%;
+    color: black;
+  }
+  .centered2 {
+    position: absolute;
+    top: 90%;
+    margin: auto;
+    width: 100%;
+    color: black;
+  }
+  .centered3 {
+    position: absolute;
+    top: 95%;
+    margin: auto;
+    width: 100%;
+    color: black;
+  }
+  .centered4 {
+    position: absolute;
+    top: 90%;
+    margin: auto;
+    width: 100%;
+    color: black;
+  }
+  #price {
+    border-radius: 5px;
+    height: 36px;
+    width: 70px;
+    border: transparent;
+  }
+#add {
+    border-radius: 5px;
+    height: 36px;
+    border: transparent;
+}
+  #price:hover {
+    background-color: blue;
+    color: beige;
+  }
+  #add:hover {
+    background-color: black;
+    color:yellow;
+  }
+  #phone, #macbook, #watch, #airpods {
+    height: 750px;
+  }
+  :root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+  }
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .container-admin {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      "main main main sidebar "
+      "main main main sidebar"
+      "main main main sidebar ";
+    grid-gap: 0.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #004D40;
+    text-align: center;
+  }
+  header {
+    background:beige;
+    grid-area: nav;
+    padding-top: var(--main-padding);
+  }
+  main {
+    background:beige;
+    grid-area: main;
+    padding-top: var(--main-padding);
+  }
+  #aside {
+    background:beige;
+    grid-area: sidebar;
+    padding-top: var(--main-padding);
+  }
+  @media (max-width: 550px) {
+    .centered1, .centered2, .centered3, .centered4 {
+        scale:0.4;
+    }
+}
+@media (max-width: 400px) {
+    .centered1, .centered2, .centered3, .centered4 {
+        scale:0.3;
+    }
+}
+@media (max-width: 300px) {
+    .centered1, .centered2, .centered3, .centered4 {
+        scale:0.3;
+    }
+}
+@media (max-width: 250px) {
+    .centered1, .centered2, .centered3, .centered4 {
+        scale:0.3;
+    }
+}
+@media (max-width: 100px) {
+    .centered1, .centered2, .centered3, .centered4 {
+        scale:0.2;
+    }
 }
