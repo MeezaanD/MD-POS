@@ -1,5 +1,5 @@
-let products = JSON.parse(localStorage.getItem('products ')) ?
-JSON.parse(localStorage.getItem('products ')) : [
+let products = JSON.parse(localStorage.getItem('products')) ?
+JSON.parse(localStorage.getItem('products')) : [
     {
         id: 1,
         productName: "iPhone 14",
@@ -92,14 +92,12 @@ function displayProducts() {
             console.log((`${item}: ${products[item]}`));
             card.innerHTML +=
             `
-            
-            <div class="card col-4">
-            <img src="${products[item].image}" class="card-img-top" alt="...">
+            <div class="card col-4 gap-2 bg-dark p-5">
+            <img src="${products[item].image}" class="card-img-top" alt="cards">
             <div class="card-body">
-            <h4 class="></h4>
-            <h5 class="card-title">${products[item].productName}</h5>
-            <p class="card-text">${products[item].price}</p>
+            <p class="card-text text-light">${products[item].productName}</p>
             <a href="#" class="btn btn-primary">Add to checkout</a>
+            <button class="btn btn-danger">${products[item].price}</button>
             </div>
             </div>
     

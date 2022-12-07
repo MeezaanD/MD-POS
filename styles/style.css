@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+
+body {
+  background-color: #333;
+}
+
 h2 {
     text-align: center;
     color: beige;
@@ -24,10 +29,14 @@ h3 {
 }
 
 .product-text{
-    font-size: large;
+    font-size: 30px;
     text-align: center;
     color: beige;
-    font-weight: 500;
+    font-weight: 500px;
+    font-family: 'Pompiere', cursive;
+    font-family: 'Zen Dots', cursive;
+    background-color: -webkit-linear-gradient(#eee, aqua);
+    -webkit-background-clip: text;
 }
 
 .text {
@@ -75,13 +84,6 @@ h3 {
     height: 500px;
 }
 
-.bindex {
-    background-color: black;
-} 
-.bindex3 {
-    background-color:grey;
-}
-
 
 
 .container1 {
@@ -124,7 +126,7 @@ h3 {
   }
   .centered3 {
     position: absolute;
-    top: 95%;
+    top: 93%;
     margin: auto;
     width: 100%;
     color: black;
@@ -165,23 +167,7 @@ h3 {
   body {
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
-  .container-admin {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
-    grid-template-areas:
-      "nav nav nav nav"
-      "main main main main"
-      "main main main main"
-      "main main main main";
-    grid-gap: 0.2rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 12px;
-    color: #004D40;
-    text-align: center;
-  }
+  
   header {
     background:grey;
     grid-area: nav;
@@ -193,9 +179,9 @@ h3 {
     padding-top: var(--main-padding);
   }
 
-  /* #card-row {
+  #card-row {
     display: flex;
-  } */
+  }
   
   @media (max-width: 550px) {
     .centered1, .centered2, .centered3, .centered4 {

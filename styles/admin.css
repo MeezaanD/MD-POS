@@ -1,5 +1,18 @@
-body > table{
-    width: 80%;
+h2 {
+    text-align: center;
+    color: beige;
+}
+
+label, tbody {
+    color: beige;
+}
+
+body {
+    background-color: rgb(54, 49, 49);
+}
+
+body, table{
+    width: 100%;
 }
 table{
     border-collapse: collapse;
@@ -9,28 +22,27 @@ table.list{
     width:100%;
 }
 td, th {
-    border: 1px solid #DDDDDD;
+    border: 1px solid rgb(221, 215, 215);
     text-align: left;
     padding: 8px;
 }
-tr:nth-child(even),table.list thead>tr {
-    background-color: #DDDDDD;
-}
+/* tr:nth-child(even),table.list thead>tr {
+    background-color: rgb(221, 215, 215);
+} */
 input[type=text], input[type=number] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(221, 215, 215);
     border-radius: 4px;
     box-sizing: border-box;
 }
 input[type=submit]{
     width: 30%;
-    background-color: #ddd;
-    color: #000;
+    background-color: rgb(221, 215, 215);
+    color: black;
     padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -41,7 +53,7 @@ form div.form-action-buttons{
 a{
     cursor: pointer;
     text-decoration: underline;
-    color: #0000EE;
+    color: blue;
     margin-right: 4px;
 }
 label.validation-error{
