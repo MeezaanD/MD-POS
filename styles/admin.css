@@ -11,6 +11,10 @@ body {
     background-color: rgb(54, 49, 49);
 }
 
+label {
+    font-size: 30px;
+}
+
 body, table{
     width: 100%;
 }
@@ -26,20 +30,22 @@ td, th {
     text-align: left;
     padding: 8px;
 }
-/* tr:nth-child(even),table.list thead>tr {
-    background-color: rgb(221, 215, 215);
-} */
+
+.form {
+    justify-content: center;
+}
+
 input[type=text], input[type=number] {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    margin: 8px ;
     display: inline-block;
     border: 1px solid rgb(221, 215, 215);
     border-radius: 4px;
     box-sizing: border-box;
+    height: 50px;
 }
 input[type=submit]{
-    width: 30%;
+    width: 20%;
     background-color: rgb(221, 215, 215);
     color: black;
     padding: 14px 20px;

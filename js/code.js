@@ -16,7 +16,7 @@ JSON.parse(localStorage.getItem('products')) : [
     },
     {
         id: 3,
-        productName: "Iphone 12",
+        productName: "iPhone 12",
         price: "R15000",
         year: 2019,
         image:"https://i.postimg.cc/k4wYMGx5/refurb-iphone-12-pro-graphite-2020.jpg"
