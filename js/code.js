@@ -143,7 +143,7 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.year;
     cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<a ><button>Edit</button><button btn onClick="onDelete(this)">Delete</button></a>`;
+    cell4.innerHTML = `<a ><button>Edit</button><button onClick="onDelete(this)">Delete</button></a>`;
 }
 function resetForm() {
     document.getElementById("id").value = "";
