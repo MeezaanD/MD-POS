@@ -191,7 +191,7 @@ h3 {
 }
   
   @media (max-width: 550px) {
-    .centered1, .centered2, .centered3, .centered4 {
+    .centered1, .centered2, .centered3, .centered4,  {
         scale:0.4;
     }
 }
@@ -215,3 +215,4 @@ h3 {
         scale:0.2;
     }
 }
+
