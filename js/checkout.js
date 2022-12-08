@@ -96,7 +96,7 @@ function displayProducts() {
             <img src="${products[item].image}" class="card-img-top" alt="cards">
             <div class="card-body">
             <p class="card-text text-light">${products[item].productName}</p>
-            <a href="#" class="btn btn-primary">Add to checkout</a>
+            <a href="/html/checkout.html" class="btn btn-primary">Proceed to checkout</a>
             <button class="btn btn-danger">${products[item].price}</button>
             </div>
             </div>

@@ -86,7 +86,7 @@ JSON.parse(localStorage.getItem('products')) : [
     },
 ];
 function displayProducts() {
-    let tbody = document.querySelector('tbody');
+    let tbody = document.querySelector('#tbody-admin');
     Object.keys(products).forEach( (item)=> {
         if(products.length){
             console.log((`${item}: ${products[item]}`));
@@ -121,6 +121,7 @@ function onFormSubmit() {
         resetForm();
     }
 }
+
 function readFormData() {
     var formData = {};
     formData["id"] = document.getElementById("id").value;
