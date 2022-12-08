@@ -85,26 +85,25 @@ JSON.parse(localStorage.getItem('products')) : [
         image: "https://i.postimg.cc/7LMdvNXv/3rd-gen.webp"
     },
 ];
-
-function displayCheckout() {
-    let tbody = document.querySelector('#tbody-checkout');
+function displayProducts() {
+    let card = document.querySelector('#card-row');
     Object.keys(products).forEach( (item)=> {
         if(products.length){
             console.log((`${item}: ${products[item]}`));
-            tbody.innerHTML +=
+            card.innerHTML +=
             `
-            <tr>
-            <td><button>Add Product</button></td>
-               <td><img src="${products[item].image}"</td>
-               <td>${products[item].productName}</td>
-               <td>${products[item].price}</td>
-               <td><input class="w-25 pl-1" value="1" type="number"></td>  
-            </tr>
+            <div class="card col-4 gap-2 bg-dark p-5">
+            <img src="${products[item].image}" class="card-img-top" alt="cards">
+            <div class="card-body">
+            <p class="card-text text-light">${products[item].productName}</p>
+            <a href="/html/checkout.html" class="btn btn-primary">Proceed to checkout</a>
+            <button class="btn btn-danger">${products[item].price}</button>
+            </div>
+            </div>
     
             `
         }
     })
+    
 }
-displayCheckout()
-
-localStorage.setItem('products', JSON.stringify(products));
+displayProducts()

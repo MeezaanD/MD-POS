@@ -49,6 +49,14 @@ table {
     object-fit: cover;
 }
 
+button {
+    border-radius: 2px;
+}
+
+#card-bottom {
+    background-color: yellow;
+}
+
 @media (max-width: 550px) {
     #cart-container {
         scale:0.8;
