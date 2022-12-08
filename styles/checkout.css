@@ -49,12 +49,13 @@ table {
     object-fit: cover;
 }
 
+
 button {
     border-radius: 2px;
 }
 
-#card-bottom {
-    background-color: yellow;
+.navbar-toggler{
+    background-color: rgb(255, 255, 255) ;
 }
 
 @media (max-width: 550px) {

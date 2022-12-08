@@ -185,6 +185,10 @@ h3 {
   #card-row {
     display: flex;
   }
+
+  .navbar-toggler{
+    background-color: rgb(255, 255, 255) ;
+}
   
   @media (max-width: 550px) {
     .centered1, .centered2, .centered3, .centered4 {

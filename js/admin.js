@@ -144,7 +144,7 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.year;
     cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<a ><button>Edit</button><button onClick="onDelete(this)">Delete</button></a>`;
+    cell4.innerHTML = `<a ><button onClick="onEdit(this)">Edit</button><button onClick="onDelete(this)">Delete</button></a>`;
 }
 function resetForm() {
     document.getElementById("id").value = "";
@@ -152,6 +152,14 @@ function resetForm() {
     document.getElementById("pPrice").value = "";
     document.getElementById("year").value = "";
     selectedRow = null;
+}
+
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("pName").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("pPrice").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("year").value = selectedRow.cells[3].innerHTML;
 }
 
 function updateRecord(formData) {

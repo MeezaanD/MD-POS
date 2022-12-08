@@ -94,7 +94,7 @@ function displayCheckout() {
             tbody.innerHTML +=
             `
             <tr>
-            <td><button>Add Product</button></td>
+            <td><button class="btn btn-dark text-white " >Add Product</button></td>
                <td><img src="${products[item].image}"</td>
                <td>${products[item].productName}</td>
                <td>${products[item].price}</td>
@@ -108,3 +108,4 @@ function displayCheckout() {
 displayCheckout()
 
 localStorage.setItem('products', JSON.stringify(products));
+

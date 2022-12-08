@@ -35,6 +35,14 @@ td, th {
     justify-content: center;
 }
 
+#id, #pName, #pPrice, #year {
+    text-align: center;
+}
+
+.navbar-toggler{
+    background-color: rgb(255, 255, 255) ;
+}
+
 input[type=text], input[type=number] {
     width: 100%;
     margin: 8px ;
