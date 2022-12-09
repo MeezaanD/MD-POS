@@ -43,47 +43,118 @@
 </header>
 <body>
     
-      <section>
-          <h2>Checkout</h2>
-      </section>
-      
-<section id="cart-container" class="container">
-  <table width="100%" >
-    <thead>
-      <tr>
-        <tbody id="tbody-checkout">
-        <th>Add to total</th>
-        <th>Image</th>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        
-      </tbody>
-      </tr>
-    </thead>
-    
-    
-
-    </tbody>
-  </table>
+  <section>
+    <h2>Checkout</h2>
 </section>
+<main>
 
-<section id="cart-bottom" class="container">
-  <div class="total">
-    <h5>Total</h5>
-    <div class="d-flex justify-content-between">
-      <h6>Subtotal</h6>
-      <p>R100000</p>
-    </div>
-    <div class="second-hr">
-      <div class="d-flex justify-content-between">
-        <h6>Total</h6>
-        <p>R100000</p>
-      </div>
-      <button>Confirm Purchase</button>
-    </div>
-  </div>
-</section>
+
+<!-- Start DEMO HTML (Use the following code into your project)-->
+<div class="cart-modal-overlay">
+<div class="cart-modal">
+<i id="close-btn" class="fas fa-times"></i>
+<h1 class="cart-is-empty">Cart is empty</h1>
+<div class="product-rows">
+</div>
+<div class="total">
+ <h1 class="cart-total">TOTAL</h1>
+   <span class="total-price">R0</span>
+     <button class="purchase-btn">PURCHASE</button>
+</div>
+</div>
+</div>
+<!--   end of cart modal -->
+<center>
+<div class="col-6">
+<div class="cart-btn">
+<i id="cart"><button>Checkout</button></i>
+<span class ="cart-quantity">0</span>
+</div>
+<section id="checkout"></section>
+
+<!--  products  -->
+
+<div class="items-container">
+<!-- Phones -->
+<div>
+<img class="product-image" src="https://i.postimg.cc/y8tHBQ7G/iphone-14-pro-max-deep-purple-6-1.webp" alt="">
+<p>Iphone 14</p>
+<span class="product-price">R30000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<div>
+<img class="product-image" src="https://i.postimg.cc/JhZ98R6y/iphone-13-pro-green-pdp-image-position-1a-wwen-jpg-8.webp" alt="">
+<p>Iphone 13</p>
+<span class="product-price">R20000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<!-- Macbooks -->
+<div>
+<img class="product-image" src="https://i.postimg.cc/k4wYMGx5/refurb-iphone-12-pro-graphite-2020.jpg" alt="">
+<p>Iphone 12</p>
+<span class="product-price">R15000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<div>
+<img class="product-image" src="https://i.postimg.cc/DyKmvvPq/macbook-pro-space-grey-1-2.webp" alt="">
+<p>Macbook Pro 16</p>
+<span class="product-price">R50000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<div>
+<img class="product-image" src="https://i.postimg.cc/hGn0VRnx/macbook-air-midnight-select-20220606.jpg" alt="">
+<p>Macbook Air</p>
+<span class="product-price">R25000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<div>
+<img class="product-image" src="https://i.postimg.cc/9QRkLhsn/10282546-3-ecommerce-68f3.png" alt="">
+<p>Macbook Pro 13</p>
+<span class="product-price">R20000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<div>
+<!-- Smartwatch -->
+<img class="product-image" src="https://i.postimg.cc/qvcGXPTB/Apple-Watch-SE-44mm-Space-Gray-Aluminum-Black-Sport-Band-MYDT2-LL-A-Refurbished.jpg" alt="">
+<p>Apple smartwatch SE</p>
+<span class="product-price">R8000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<div>
+<img class="product-image" src="https://i.postimg.cc/26dwTgv7/Apple-Watch-Series-7-GPS-41mm.jpg" alt="">
+<p>Apple smartwatch series 7</p>
+<span class="product-price">R9000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<div>
+<img class="product-image" src="https://i.postimg.cc/G247QXKM/Apple-Watch-Series-8-GPS-Cellular-45mm-Graphite-Stainless-Steel-Case-with-Midnight-Sport-Band-S.jpg" alt="">
+<p>Apple smartwatch Series 8</p>
+<span class="product-price">R12000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<!-- Airpods -->
+<div>
+<img class="product-image" src="https://i.postimg.cc/YqRv9c9j/1st-gen.jpg" alt="">
+<p>Apple airpods 1st-gen</p>
+<span class="product-price">R2000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<div>
+<img class="product-image" src="https://i.postimg.cc/bY3PSqxX/2nd-gen.webp" alt="">
+<p>Apple airpods 2nd-gen</p>
+<span class="product-price">R3000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+<div>
+<img class="product-image" src="https://i.postimg.cc/7LMdvNXv/3rd-gen.webp" alt="">
+<p>Apple airpods 3rd-gen</p>
+<span class="product-price">R4000</span>
+<button class="add-to-cart">Add to cart</button>
+</div>
+</div>
+</div>
+</center>
+</main>
 
 
       <footer>
