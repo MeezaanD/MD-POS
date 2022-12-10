@@ -109,7 +109,7 @@ function displayDrop() {
              </a>
 
              <ul class="dropdown-menu">
-             <li><a class="dropdown-item" href="#">Phone</a></li>
+             <li><a class="dropdown-item" href="">Phone</a></li>
              <li><a class="dropdown-item" href="#">Macbook</a></li>
              <li><a class="dropdown-item" href="#">Smartwatch</a></li>
              <li><a class="dropdown-item" href="#">Airpod</a></li>

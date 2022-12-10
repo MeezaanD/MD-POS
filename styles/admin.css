@@ -77,3 +77,7 @@ label.validation-error{
 .hide{
     display:none;
 }
+
+.buttons {
+    display: flex;
+}

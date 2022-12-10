@@ -13,11 +13,11 @@
     <nav class="navbar bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.html"><img src="/assets/apple (1).webp" width="100px" height="70px" alt="logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas bg-dark">
+            <div class="offcanvas text-light bg-dark">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navbar</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -66,8 +66,31 @@
             </form></center>
     </tr>
     <br>
+<div class="buttons">
+  <div class="sort">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+     Sort By
+     </a>
 
-    
+     <ul class="dropdown-menu">
+     <li><a class="dropdown-item" href="#">Phone</a></li>
+     <li><a class="dropdown-item" href="#">Macbook</a></li>
+     <li><a class="dropdown-item" href="#">Smartwatch</a></li>
+     <li><a class="dropdown-item" href="#">Airpod</a></li>
+     </ul>
+    </div>
+  <div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+     Filter By
+     </a>
+
+     <ul class="dropdown-menu">
+     <li><a class="dropdown-item" href="#">Highest to low</a></li>
+     <li><a class="dropdown-item" href="#">Lowest to high</a></li>
+     </ul>
+    </div>
+</div>
+
 <table class="list" id="productList">
     <tbody id="tbody-admin">
       <th>ID</th>
