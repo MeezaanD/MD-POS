@@ -109,7 +109,7 @@ function displayProducts() {
                <td>${products[item].productName}</td>
                <td>${products[item].price}</td>
                <td>${products[item].year}</td>
-               <td><button>Edit</button><button onClick="onDelete(this)">Delete</button></td>
+               <td><button class="btn text-dark bg-info border-dark">Edit</button><button class="btn text-dark bg-danger border-dark" onClick="onDelete(this)">Delete</button></td>
                
             </tr>
     

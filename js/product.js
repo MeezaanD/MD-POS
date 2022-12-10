@@ -107,7 +107,6 @@ function displayDrop() {
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              Sort By
              </a>
-
              <ul class="dropdown-menu">
              <li><a class="dropdown-item" href="">Phone</a></li>
              <li><a class="dropdown-item" href="#">Macbook</a></li>
