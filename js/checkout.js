@@ -210,6 +210,7 @@ document.getElementsByClassName('cart-quantity')[0].textContent = i /= 2
 
 const purchaseBtn = document.querySelector('.purchase-btn');
 const closeCartModal = document.querySelector('.cart-modal');
+
 purchaseBtn.addEventListener('click', purchaseBtnClicked)
 
 function purchaseBtnClicked () {
