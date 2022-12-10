@@ -109,7 +109,7 @@ function displayProducts() {
                <td>${products[item].productName}</td>
                <td>${products[item].price}</td>
                <td>${products[item].year}</td>
-               <td><button class="btn text-dark bg-info border-dark">Edit</button><button class="btn text-dark bg-danger border-dark" onClick="onDelete(this)">Delete</button></td>
+               <td><button class="btn text-dark bg-info border-dark" onClick="onEdit(this)">Edit</button><button class="btn text-dark bg-danger border-dark" onClick="onDelete(this)">Delete</button></td>
                
             </tr>
     
@@ -131,6 +131,7 @@ function onFormSubmit() {
         else
             updateRecord(formData);
         resetForm();
+        userSearch();
     }
 }
 
@@ -156,7 +157,7 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.year;
     cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<a ><button onClick="onEdit(this)">Edit</button><button onClick="onDelete(this)">Delete</button></a>`;
+    cell4.innerHTML = `<a ><button class="btn text-dark bg-info border-dark" onClick="onEdit(this)">Edit</button><button class="btn text-dark bg-danger border-dark" onClick="onDelete(this)">Delete</button></a>`;
 }
 function resetForm() {
     document.getElementById("id").value = "";
@@ -180,6 +181,7 @@ function updateRecord(formData) {
     selectedRow.cells[2].innerHTML = formData.pPrice;
     selectedRow.cells[3].innerHTML = formData.year;
 }
+
 function onDelete(td) {
     if (confirm('Are you sure to delete this product ?')) {
         row = td.parentElement.parentElement;
@@ -199,3 +201,25 @@ function validate() {
     }
     return isValid;
 }
+
+
+function userSearch() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("searchDetail");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("productList");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+
+userSearch()

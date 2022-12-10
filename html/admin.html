@@ -46,19 +46,19 @@
             <center><form class="form" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                 <div>
                     <label>Product ID:</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                    <input type="text" name="id" id="id">
+                    <input type="text" placeholder="eg. 13" name="id" id="id">
                 </div>
                 <div>
                     <label>Product name:</label>
-                    <input type="text" name="pName" id="pName">
+                    <input type="text" placeholder="eg. iPhone 15" name="pName" id="pName">
                 </div>
                 <div>
                     <label>Product Price:</label>
-                    <input type="number" name="pPrice" id="pPrice">
+                    <input type="number" placeholder="eg. 400000" name="pPrice" id="pPrice">
                 </div>
                 <div>
                     <label>Year Model:</label>
-                    <input type="text" name="year" id="year">
+                    <input type="text" placeholder="eg. 2023" name="year" id="year">
                 </div>
                 <div  class="form-action-buttons">
                     <center><input type="submit" value="Add New Product"></center>
@@ -67,30 +67,18 @@
     </tr>
     <br>
 
-    <input class="search w-25" type="text" id="myinput" placeholder="Search...(eg.product name, price)" title="Type in something">
+    <input type="text" id="searchDetail" onkeyup="userSearch()" placeholder="Search for product name">
 
 
 <div class="buttons">
-  <div class="sort">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-     Sort By
-     </a>
-
-     <ul class="dropdown-menu">
-     <li><a class="dropdown-item" href="#">Phone</a></li>
-     <li><a class="dropdown-item" href="#">Macbook</a></li>
-     <li><a class="dropdown-item" href="#">Smartwatch</a></li>
-     <li><a class="dropdown-item" href="#">Airpod</a></li>
-     </ul>
-    </div>
   <div class="filter">
     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
      Filter By
      </a>
 
      <ul class="dropdown-menu">
-     <li><a class="dropdown-item" href="#">Highest to low</a></li>
-     <li><a class="dropdown-item" href="#">Lowest to high</a></li>
+     <li><a class="dropdown-item" href="#">Low to High</a></li>
+     <li><a class="dropdown-item" href="#">High to Low</a></li>
      </ul>
     </div>
 </div>
