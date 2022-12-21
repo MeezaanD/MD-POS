@@ -4,7 +4,7 @@ JSON.parse(localStorage.getItem('products')) : [
         id: 1,
         productName: "iPhone 14",
         price: "R30000",
-        year: 2022,
+        year: 2023,
         image: "https://i.postimg.cc/y8tHBQ7G/iphone-14-pro-max-deep-purple-6-1.webp",
         type: "phone"
     },
