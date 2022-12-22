@@ -43,52 +43,11 @@
       <section>
         <h2>CRUD SYSTEM</h2>
     </section>
-            <center><form class="form" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-                <div>
-                    <label>Product ID:</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                    <input type="text" placeholder="eg. 13" name="id" id="id">
-                </div>
-                <div>
-                    <label>Product name:</label>
-                    <input type="text" placeholder="eg. iPhone 15" name="pName" id="pName">
-                </div>
-                <div>
-                    <label>Product Price:</label>
-                    <input type="number" placeholder="eg. 400000" name="pPrice" id="pPrice">
-                </div>
-                <div>
-                    <label>Year Model:</label>
-                    <input type="text" placeholder="eg. 2023" name="year" id="year">
-                </div>
-                <div  class="form-action-buttons">
-                    <center><input type="submit" value="Add New Product"></center>
-                </div>
-            </form></center>
-    </tr>
-    <br>
 
-    <input type="text" id="searchDetail" onkeyup="userSearch()" placeholder="Search for product name">
+<center><div id="form" class="border p-5 w-25"></div></center>
+<div id="table" class="container-fluid"></div>
 
-  <div class="filter">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-     Sort By
-     </a>
 
-     <ul class="dropdown-menu">
-     <li><a class="dropdown-item" href="#">Low to High</a></li>
-     <li><a class="dropdown-item" href="#">High to Low</a></li>
-     </ul>
-    </div>
-
-<table class="list" id="productList">
-    <tbody id="tbody-admin">
-      <th>ID</th>
-      <th>Product Name</th>
-      <th>Price</th>
-      <th>Year</th>
-      <th>Configure</th>
-    </tbody>
-</table>
       <footer>
         <nav class="navbar bg-dark text-light">
             <div class="container-fluid">

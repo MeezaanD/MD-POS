@@ -4,7 +4,7 @@ JSON.parse(localStorage.getItem('products')) : [
         id: 1,
         productName: "iPhone 14",
         price: "R30000",
-        year: 2023,
+        year: 2022,
         image: "https://i.postimg.cc/y8tHBQ7G/iphone-14-pro-max-deep-purple-6-1.webp",
         type: "phone"
     },
@@ -128,12 +128,11 @@ function displayProducts() {
             card.innerHTML +=
             `
             
-            <div class="card  col-4 gap-2 bg-dark p-5">
-            <img src="${products[item].image}" class="card-img-top" alt="cards">
+            <div class="card  col-4 gap-5 bg-dark p-5">
+            <img src="${products[item].image}" class="card-img-top" style="height:500px;" alt="cards">
             <div class="card-body">
             <p class="card-text text-light">${products[item].productName}</p>
             <a href="/html/checkout.html" class="btn btn-primary">Proceed to checkout</a>
-            <button class="btn btn-danger">${products[item].price}</button>
             </div>
             </div>
             `

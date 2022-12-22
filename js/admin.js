@@ -97,110 +97,165 @@ JSON.parse(localStorage.getItem('products')) : [
         type: "airpod"
     },
 ];
-function displayProducts() {
-    let tbody = document.querySelector('#tbody-admin');
-    Object.keys(products).forEach( (item)=> {
-        if(products.length){
-            console.log((`${item}: ${products[item]}`));
-            tbody.innerHTML +=
-            `
-            <tr>
-               <td>${products[item].id}</td>
-               <td>${products[item].productName}</td>
-               <td>${products[item].price}</td>
-               <td>${products[item].year}</td>
-               <td><button class="btn text-dark bg-info border-dark" onClick="onEdit(this)">Edit</button><button class="btn text-dark bg-danger border-dark" onClick="onDelete(this)">Delete</button></td>
-               
-            </tr>
-    
-            `
-        }
-    })
-}
-displayProducts()
+
 
 localStorage.setItem('products', JSON.stringify(products));
 
-var selectedRow = null
-function onFormSubmit() {
-    if (validate()) {
-        var formData = readFormData();
-        // var formData = displayProducts();
-        if (selectedRow == null)
-            insertNewRecord(formData);
-        else
-            updateRecord(formData);
-        resetForm();
-        userSearch();
+var form = 
+`<div>
+<div class="form-group">
+<label for="id">ID:</label>
+<input type="name" class="form-control" id="id" >
+</div>
+  <div class="form-group">
+    <label for="product">Product Name:</label>
+    <input type="name" class="form-control" id="name" >
+  </div>
+  <div class="form-group">
+    <label for="product">Product Price:</label>
+    <input type="number" class="form-control" id="price" >
+  </div>
+  <div class="form-group">
+    <label for="product">Year:</label>
+    <input type="number" class="form-control" id="year" >
+  </div>
+  <button type="submit" class="btn btn-primary mt-3" onclick="save()">Add new product</button>
+</div>`;
+
+function table() {
+    let table = 
+    `<table class="table">
+  <thead>
+    <tr class="tr text-light">
+      <th>ID</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Year</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>`;
+  Object.keys(products).forEach((item)=> {
+    if(products.length){
+        console.log(`${item}: ${products[item]}`);
+        `
+        <tr>
+             <td>${products[item].id}</td>
+             <td>${products[item].productName}</td>
+             <td>${products[item].price}</td>
+             <td>${products[item].year}</td>
+        </tr>
+        `
     }
-}
-
-function readFormData() {
-    var formData = {};
-    formData["id"] = document.getElementById("id").value;
-    formData["pName"] = document.getElementById("pName").value;
-    formData["pPrice"] = document.getElementById("pPrice").value;
-    formData["year"] = document.getElementById("year").value;
-    return formData;
-}
-
-
-function insertNewRecord(data) {
-    var table = document.getElementById("productList").getElementsByTagName('tbody')[0];
-    var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
-    cell1.innerHTML = data.id;
-    cell2 = newRow.insertCell(1);
-    cell2.innerHTML = data.pName;
-    cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.pPrice;
-    cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.year;
-    cell4 = newRow.insertCell(4);
-    cell4.innerHTML = `<a ><button class="btn text-dark bg-info border-dark" onClick="onEdit(this)">Edit</button><button class="btn text-dark bg-danger border-dark" onClick="onDelete(this)">Delete</button></a>`;
-}
-function resetForm() {
-    document.getElementById("id").value = "";
-    document.getElementById("pName").value = "";
-    document.getElementById("pPrice").value = "";
-    document.getElementById("year").value = "";
-    selectedRow = null;
-}
-
-function onEdit(td) {
-    selectedRow = td.parentElement.parentElement;
-    document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("pName").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("pPrice").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("year").value = selectedRow.cells[3].innerHTML;
-}
-
-function updateRecord(formData) {
-    selectedRow.cells[0].innerHTML = formData.id;
-    selectedRow.cells[1].innerHTML = formData.pName;
-    selectedRow.cells[2].innerHTML = formData.pPrice;
-    selectedRow.cells[3].innerHTML = formData.year;
-}
-
-function onDelete(td) {
-    if (confirm('Are you sure to delete this product ?')) {
-        row = td.parentElement.parentElement;
-        document.getElementById("productList").deleteRow(row.rowIndex);
-        resetForm();
-    }
-}
-function validate() {
-    isValid = true;
-    if (document.getElementById("id").value == "") {
-        isValid = false;
-        document.getElementById("fullNameValidationError").classList.remove("hide");
+  });
+  
+    for (let i = 0; i < details.length; i++){
+        table = table + `<tr>
+      <td>${details[i].id}</td>
+      <td>${details[i].name}</td>
+      <td>R${details[i].price}</td>
+      <td>${details[i].year}</td>
+      <td><button type="button" class="btn btn-info" text-dark onclick="edit(${i})">Edit</button></td>
+      <td><button type="button" class="btn btn-danger text-dark" onclick="deleteData(${i})">Delete</button></td>
+    </tr> `;
+    };
+    table = table+`</tbody>
+    </table>`;
+    document.getElementById("table").innerHTML = table;
+};
+document.getElementById("form").innerHTML = form;
+details = [];
+getData();
+table();
+function getData(){
+    let Data = localStorage.getItem("details");
+    if (Data) {
+        details = JSON.parse(Data);
     } else {
-        isValid = true;
-        if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
-            document.getElementById("fullNameValidationError").classList.add("hide");
+        setData();
+    };
+};
+function setData() {
+    localStorage.setItem("details", JSON.stringify(details));
+};
+function save() {
+    let id = document.getElementById("id");
+    let name = document.getElementById("name");
+    let price = document.getElementById("price");
+    let year = document.getElementById("year");
+
+    if (name.value == 0) {
+        alert("name is Empty");
+        return
     }
-    return isValid;
+    let data = {
+        id: id.value,
+        name: name.value,
+        price: price.value,
+        year: year.value
+    };
+    details.push(data);
+    setData();
+
+    table();
+    id.value = "";
+    name.value = "";
+    price.value = "";
+    year.value = "";
+};
+function deleteData(index) {
+    details.splice(index, 1);
+    alert('Are you sure you want to delete this product');
+    setData();
+    table();
+
+};
+
+function edit(index) {
+    let editForm = 
+    `<div>
+  <div class="form-group">
+    <label for="ID">Update ID</label>
+    <input type="text" value="${details[index].id}" class="form-control" id="newId"  placeholder="Update Product ID">
+  </div>
+  <div class="form-group mt-3">
+    <label for="name">Update Product Name</label>
+    <input type="text" value="${details[index].name}" class="form-control" id="newName" placeholder="Update Product Name">
+  </div>
+  <div class="form-group mt-3">
+    <label for="price">Update Product Price</label>
+    <input type="number" value="${details[index].price}" class="form-control" id="newPrice" placeholder="Update Product Price">
+  </div>
+  <div class="form-group mt-3">
+    <label for="year">Update Year</label>
+    <input type="number" value="${details[index].year}" class="form-control" id="newYear" placeholder="Update Year">
+  </div>
+  <button type="submit" class="btn btn-primary mt-3" onclick="update(${index})">Update Product</button>
+</div>`;
+    document.getElementById("form").innerHTML = editForm;
+  
+};
+function update(index) {
+    let newID = document.getElementById('newID');
+    let newName = document.getElementById('newName');
+    let newPrice = document.getElementById('newPrice');
+    let newYear = document.getElementById('newYear');
+
+    details[index] = {
+        id: newId.value,
+        name: newName.value,
+        price: newPrice.value,
+        year: newYear.value
+    };
+    setData();
+    table();
+    document.getElementById("form").innerHTML = form;
+
 }
+
+
+
 
 
 function userSearch() {
