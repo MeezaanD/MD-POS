@@ -122,6 +122,8 @@ var form =
   <button type="submit" class="btn btn-primary mt-3" onclick="save()">Add new product</button>
 </div>`;
 
+
+
 function table() {
     let table = 
     `<table class="table">
@@ -257,24 +259,3 @@ function update(index) {
 
 
 
-
-function userSearch() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchDetail");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("productList");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[1];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }       
-    }
-  }
-
-userSearch()
