@@ -141,6 +141,8 @@ function sort() {
 }
 sort()
 
+
+
 function table() {
     let table = 
     `<table class="table">
