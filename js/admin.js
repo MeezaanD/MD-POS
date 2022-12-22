@@ -188,7 +188,7 @@ function save() {
     let year = document.getElementById("year");
 
     if (name.value == 0) {
-        alert("name is Empty");
+        alert("Product details are empty");
         return
     }
     let data = {
